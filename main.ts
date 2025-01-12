@@ -2,7 +2,8 @@ let Sonor = 0
 music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
 basic.showIcon(IconNames.Happy)
 basic.pause(500)
-basic.showString("3...2...1...")
+basic.clearScreen()
+basic.showString("3 2 1")
 wuKong.setAllMotor(-20, -30)
 basic.forever(function () {
     Sonor = sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P1)
@@ -16,6 +17,7 @@ basic.forever(function () {
             basic.pause(randint(10, 200))
             music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
         }
+        Sonor = sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P1)
     }
     wuKong.setAllMotor(-20, -30)
 })
